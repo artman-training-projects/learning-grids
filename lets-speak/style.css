@@ -1,36 +1,66 @@
 :root {
-  --color-bg-white: #ffffff;
-  --color-bg-light: #f1f3fe;
   --color-bg-dark: #3c425f;
-  --color-light-blue: #b4bef0;
+  --color-bg-light: #f1f3fe;
+  --color-bg-white: #ffffff;
   --color-dark-blue: #576bcc;
+  --color-light-blue: #b4bef0;
   --color-orange: #ff8f0b;
 }
 
 .visually-hidden {
   position: absolute;
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 0;
-  border: 0;
-  height: 1px;
+
   width: 1px;
+  height: 1px;
+  padding: 0;
   overflow: hidden;
+
+  border: 0;
+
+  clip: rect(1px, 1px, 1px, 1px);
 }
 
 body {
-  padding: 0;
-  margin: 0;
   width: 1440px;
   height: 980px;
+  margin: 0;
+  padding: 0;
 
-  font-family: "Roboto", "Arial", sans-serif;
   font-weight: 300;
   font-size: 14px;
   line-height: 20px;
+  font-family: "Roboto", "Arial", sans-serif;
   color: var(--color-bg-dark);
 }
 
 .wrapper {
-  margin: 0 auto;
   width: 1440px;
+  margin: 0 auto;
+}
+
+.page {
+  display: grid;
+  min-height: 100vh;
+
+  grid-template-areas: "nav header"
+  "nav main"
+  "footer footer";
+  grid-template-columns: 280px 1fr;
+  grid-template-rows: 80px 1fr 60px;
+}
+
+.page-nav {
+  grid-area: nav;
+}
+
+.page-header {
+  grid-area: header;
+}
+
+.page-main {
+  grid-area: main;
+}
+
+.page-footer {
+  grid-area: footer;
 }
