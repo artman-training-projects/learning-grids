@@ -1,3 +1,36 @@
+:root {
+  --color-bg-white: #ffffff;
+  --color-bg-light: #f1f3fe;
+  --color-bg-dark: #3c425f;
+  --color-light-blue: #b4bef0;
+  --color-dark-blue: #576bcc;
+  --color-orange: #ff8f0b;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
 body {
-  background-color: dimgrey;
+  padding: 0;
+  margin: 0;
+  width: 1440px;
+  height: 980px;
+
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--color-bg-dark);
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 1440px;
 }
