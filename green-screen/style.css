@@ -1,5 +1,12 @@
 :root {
-  /**/
+  --color-gray: #666666;
+  --color-gray-dark: #1e1e40;
+  --color-gray-light: #aaaaaa;
+  --color-green: #43d000;
+  --color-light: #ecf5ff;
+  --color-violet: #5957db;
+  --color-violet-light: #ccdaf4;
+  --color-white: #ffffff;
 }
 
 /* font-family: 'Courier Prime', monospace; */
