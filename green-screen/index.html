@@ -9,6 +9,241 @@
   <title>Green screen</title>
 </head>
 <body>
+  <header class="page-header">
+    <a href="#" class="page-header__logo-link">
+      <img src="" alt="Green Screen, кинотеатр" class="page-header__logo">
+    </a>
 
+    <ul class="page-header__breadcrumbs">
+      <li class="page-header__breadcrumb">
+        <a href="#" class="page-header__breadcrumb-link">Главная</a>
+      </li>
+      <li class="page-header__breadcrumb">
+        <a href="#" class="page-header__breadcrumb-link">Сеансы</a>
+      </li>
+      <li class="page-header__breadcrumb">
+        <a class="page-header__breadcrumb-link">Кекс наносит ответный удар</a>
+      </li>
+    </ul>
+
+    <select class="page-header__theaters">
+      <option class="page-header__theater">Кинотеатр «На Карповке»</option>
+    </select>
+  </header>
+
+  <nav class="page-nav">
+    <ul class="page-nav__list">
+      <li class="page-nav__item">
+        <a href="#" class="page-nav__link">Сеансы</a>
+      </li>
+      <li class="page-nav__item">
+        <a href="#" class="page-nav__link">Трейлеры</a>
+      </li>
+      <li class="page-nav__item">
+        <a href="#" class="page-nav__link">Новости</a>
+      </li>
+      <li class="page-nav__item">
+        <a href="#" class="page-nav__link">О нас</a>
+      </li>
+      <li class="page-nav__item">
+        <a href="#" class="page-nav__link">Контакты</a>
+      </li>
+    </ul>
+
+    <div class="page-nav__account">
+      <a href="#" class="page-nav__account-link">
+        <img src="" alt="Аватарка">
+        Аккаунт
+      </a>
+    </div>
+  </nav>
+
+  <main class="page-main">
+    <section class="movie">
+      <h2 class="visually-hidden">Выбор сеанса и места</h2>
+
+      <section class="date">
+        <!-- Выбор даты/времени -->
+        <button class="date__prev" type="button">
+          <span class="visually-hidden">назад</span>
+        </button>
+
+        <ul class="date__days">
+          <li class="date__day">
+            <button class="date__day-btn" type="button">
+              <span class="date__date">22 сентября</span>
+              <span class="date__week-day">четверг</span>
+            </button>
+          </li>
+          <li class="date__day">
+            <button class="date__day-btn date__day-btn--current" type="button">
+              <span class="date__date">23 сентября</span>
+              <span class="date__week-day">пятница</span>
+            </button>
+          </li>
+          <li class="date__day">
+            <button class="date__day-btn" type="button">
+              <span class="date__date">24 сентября</span>
+              <span class="date__week-day">суббота</span>
+            </button>
+          </li>
+        </ul>
+
+        <button class="date__next" type="button">
+          <span class="visually-hidden">назад</span>
+        </button>
+
+        <p class="date__row1">2D:</p>
+        <ul class="date__times">
+          <li class="date__time">
+            <button class="date__time-btn" type="button">
+              <span>12:00 - 13:30</span>
+            </button>
+          </li>
+          <li class="date__time">
+            <button class="date__time-btn" type="button">
+              <span>16:30 - 18:00</span>
+            </button>
+          </li>
+          <li class="date__time">
+            <button class="date__time-btn date__time-btn--current" type="button">
+              <span>20:00 - 21:30</span>
+            </button>
+          </li>
+        </ul>
+
+        <p class="date__row1">3D:</p>
+        <ul class="date__times">
+          <li class="date__time">
+            <button class="date__time-btn" type="button">
+              <span>10:00 - 11:30</span>
+            </button>
+          </li>
+          <li class="date__time">
+            <button class="date__time-btn" type="button">
+              <span>23:00 - 00:30</span>
+            </button>
+          </li>
+        </ul>
+      </section>
+
+      <div class="screen">
+        <p class="screen_text">Экран</p>
+      </div>
+
+      <section class="position">
+        <p class="position__row1">ряд 1:</p>
+        <ul class="position__seats">
+          <li class="position__seat">
+            <button class="possition__btn possition__btn--occupied" type="button">1</button>
+          </li>
+          <li class="position__seat">
+            <button class="possition__btn possition__btn--occupied" type="button">2</button>
+          </li>
+          <li class="position__seat">
+            <button class="possition__btn" type="button">3</button>
+          </li>
+          <li class="position__seat">
+            <button class="possition__btn possition__btn--occupied" type="button">4</button>
+          </li>
+          <li class="position__seat">
+            <button class="possition__btn possition__btn--occupied" type="button">5</button>
+          </li>
+        </ul>
+
+        <p class="position__row2">ряд 2:</p>
+        <ul class="position__seats">
+          <li class="position__seat">
+            <button class="possition__btn possition__btn--occupied" type="button">1</button>
+          </li>
+          <li class="position__seat">
+            <button class="possition__btn" type="button">2</button>
+          </li>
+          <li class="position__seat">
+            <button class="possition__btn" type="button">3</button>
+          </li>
+          <li class="position__seat">
+            <button class="possition__btn possition__btn--selected" type="button">4</button>
+          </li>
+          <li class="position__seat">
+            <button class="possition__btn possition__btn--selected" type="button">5</button>
+          </li>
+          <li class="position__seat">
+            <button class="possition__btn possition__btn--occupied" type="button">6</button>
+          </li>
+          <li class="position__seat">
+            <button class="possition__btn" type="button">7</button>
+          </li>
+          <li class="position__seat">
+            <button class="possition__btn possition__btn--occupied" type="button">8</button>
+          </li>
+          <li class="position__seat">
+            <button class="possition__btn" type="button">9</button>
+          </li>
+        </ul>
+
+        <ul class="position__params">
+          <li class="position__param">Место занято</li>
+          <li class="position__param">Место свободно</li>
+          <li class="position__param">Выбранное место</li>
+        </ul>
+      </section>
+    </section>
+
+    <section class="order">
+      <h2 class="visually-hidden">Оформление билета</h2>
+
+
+      <section class="ticket">
+        <header class="ticket__header">
+          <h3>Билеты</h3>
+          <span>×2</span>
+        </header>
+
+        <dl class="ticket__data">
+          <dt>Фильм</dt>
+            <dd>Кекс наносит ответный удар</dd>
+          <dt>Дата</dt>
+            <dd>23 сентября</dd>
+          <dt>Время</dt>
+            <dd>20:00</dd>
+          <dt>Ряд</dt>
+            <dd>2</dd>
+          <dt>Места</dt>
+            <dd>4,5</dd>
+        </dl>
+
+        <div class="ticket__barcode">
+          <img src="" alt="штрих код билета">
+        </div>
+      </section>
+
+      <section class="card">
+        <h3>Оплата</h3>
+
+        <div class="card__info">
+          <div class="card__info-logo">
+            <img src="" alt="Логотип карты">
+            <span>SuperCard</span>
+          </div>
+
+          <div class="card__info-number">
+            <span>1234</span>
+            <span>5678</span>
+            <span>9012</span>
+            <span>3456</span>
+          </div>
+
+          <div class="card__info-name">
+            <span>Opoznanniy Enot</span>
+            <span>20/99</span>
+          </div>
+        </div>
+
+        <button class="card__add" type="button"><span class="visually-hidden">Добавить карту</span></button>
+        <button class="card__pay" type="button">Оплатить 800 ₽</button>
+      </section>
+    </section>
+  </main>
 </body>
 </html>
