@@ -3,14 +3,13 @@
   --color-gray-dark: #1e1e40;
   --color-gray-light: #aaaaaa;
   --color-green: #43d000;
-  --color-light: #ecf5ff;
+  --color-light: #ecf2ff;
   --color-violet: #5957db;
   --color-violet-light: #ccdaf4;
   --color-white: #ffffff;
 }
 
 /* font-family: 'Courier Prime', monospace; */
-/* font-family: 'Montserrat', sans-serif; */
 
 .visually-hidden {
   position: absolute;
@@ -23,4 +22,70 @@
   border: 0;
 
   clip: rect(1px, 1px, 1px, 1px);
+}
+
+.page {
+  font-family: "Montserrat", sans-serif;
+
+  background-color: var(--color-white);
+}
+
+.page-body {
+  display: grid;
+  width: 1920px;
+  height: 980px;
+  margin: 0 auto;
+
+  grid-template-areas: "head head"
+  "nav main";
+  grid-template-columns: 258px auto;
+  grid-template-rows: 80px auto;
+  ;
+}
+
+.page-header {
+  background-color: var(--color-light);
+
+  grid-area: head;
+}
+
+.page-nav {
+  background-color: var(--color-violet);
+
+  grid-area: nav;
+}
+
+.page-main {
+  display: grid;
+
+  grid-area: main;
+  grid-template-areas: "movie order";
+  grid-template-columns: auto 360px;
+  grid-template-rows: auto;
+}
+
+.movie {
+  grid-area: movie;
+}
+
+.order {
+  display: grid;
+
+  grid-area: order;
+  grid-template-areas: "ticket"
+  "card";
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+}
+
+.ticket {
+  background-color: var(--color-violet);
+
+  grid-area: ticket;
+}
+
+.card {
+  background-color: var(--color-light);
+
+  grid-area: card;
 }
