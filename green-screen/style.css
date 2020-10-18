@@ -132,10 +132,93 @@
 */
 
 .page-nav {
+  display: grid;
+  padding: 20px 0 50px 30px;
+
   background-color: var(--color-violet);
 
   grid-area: nav;
+  grid-template-rows: 1fr auto;
 }
+
+.page-nav__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.page-nav__item {
+  display: block;
+  padding: 23px 0 19px 60px;
+
+  text-transform: uppercase;
+
+  background-repeat: no-repeat;
+  background-position: 30px center;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.page-nav__item--seance {
+  background-image: url("./img/ico-seance.svg");
+}
+
+.page-nav__item--trailer {
+  background-image: url("./img/ico-trailer.svg");
+}
+
+.page-nav__item--news {
+  background-image: url("./img/ico-news.svg");
+}
+
+.page-nav__item--about {
+  background-image: url("./img/ico-about.svg");
+}
+
+.page-nav__item--contacts {
+  background-image: url("./img/ico-contacts.svg");
+}
+
+.page-nav__link {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.page-nav__item--current {
+  background-color: var(--color-light);
+}
+
+.page-nav__link--current {
+  color: var(--color-violet);
+}
+
+.page-nav__account {
+  margin-left: 30px;
+}
+
+.page-nav__account-link {
+  display: grid;
+  justify-content: left;
+  align-items: center;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--color-white);
+  text-transform: uppercase;
+  text-decoration: none;
+  column-gap: 12px;
+
+  grid-template-columns: auto auto;
+}
+
+/*
+  MAIN
+*/
 
 .page-main {
   display: grid;
