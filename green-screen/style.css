@@ -240,17 +240,198 @@
   grid-template-areas: "ticket"
   "card";
   grid-template-columns: auto;
-  grid-template-rows: auto auto;
+  grid-template-rows: 1fr 1fr;
 }
 
 .ticket {
+  padding: 40px 60px;
+
   background-color: var(--color-violet);
 
   grid-area: ticket;
 }
 
+.ticket__header {
+  display: grid;
+  justify-content: space-between;
+  padding: 20px 30px;
+
+  color: var(--color-white);
+  text-transform: uppercase;
+
+  background-color: var(--color-green);
+
+  grid-template-columns: auto auto;
+}
+
+.ticket__header h3 {
+  margin: 0;
+}
+
+.ticket__data {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 20px 30px 30px;
+
+  font-size: 12px;
+
+  background-color: var(--color-white);
+
+  gap: 20px;
+}
+
+.ticket__data dt {
+  width: 50px;
+
+  text-align: right;
+  color: var(--color-gray-light);
+}
+
+.ticket__data dd {
+  flex-grow: 1;
+  width: 50%;
+  margin: 0;
+
+  font-weight: 700;
+  color: var(--color-gray);
+}
+
+.ticket__barcode {
+  position: relative;
+
+  padding: 30px;
+
+  background-color: var(--color-white);
+  border-top: 2px dashed var(--color-violet);
+}
+
+.ticket__barcode::before,
+.ticket__barcode::after {
+  content: "";
+  position: absolute;
+  top: -8px;
+
+  width: 16px;
+  height: 16px;
+
+  background-color: var(--color-violet);
+  border-radius: 100%;
+}
+
+.ticket__barcode::before {
+  left: -8px;
+}
+
+.ticket__barcode::after {
+  right: -8px;
+}
+
 .card {
+  display: grid;
+  padding: 40px 60px;
+
+  color: var(--color-white);
+
   background-color: var(--color-light);
 
+  gap: 20px;
   grid-area: card;
+  grid-template-areas: "head" "card" "add" "pay";
+  grid-template-rows: auto;
+}
+
+.card h3 {
+  margin: 0;
+
+  font-size: 16px;
+  color: var(--color-gray);
+  text-transform: uppercase;
+
+  grid-area: head;
+}
+
+.card__info {
+  display: grid;
+  padding: 30px;
+
+  background-color: var(--color-violet);
+  border-radius: 8px;
+  box-shadow: 0 8px 20px var(--color-violet);
+
+  gap: 20px;
+  grid-area: card;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.card__info-logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__info-logo img {
+  display: inline-block;
+  width: 35px;
+  height: 18px;
+
+  font-size: 0;
+
+  background-color: var(--color-light);
+  border-radius: 2px;
+}
+
+.card__info-logo span {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.card__info-number {
+  display: flex;
+  justify-content: space-between;
+
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.card__info-name {
+  display: flex;
+  justify-content: space-between;
+
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+
+  opacity: 0.5;
+}
+
+.card__add {
+  width: 100%;
+  height: 56px;
+
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--color-violet-light);
+
+  background-color: transparent;
+  border: 2px solid var(--color-violet-light);
+  border-radius: 8px;
+
+  grid-area: add;
+}
+
+.card__pay {
+  width: 100%;
+  height: 60px;
+  margin-top: auto;
+
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--color-white);
+
+  background-color: var(--color-green);
+  border: none;
+  border-radius: 30px;
+
+  grid-area: pay;
 }
