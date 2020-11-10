@@ -436,12 +436,13 @@
   display: grid;
   margin: 60px;
 
+  gap: 40px;
   grid-area: movie;
   grid-template-areas: "date"
   "screen"
   "position";
   grid-template-columns: auto;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: auto 60px auto;
 }
 
 
@@ -458,7 +459,20 @@
 }
 
 .screen {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+
+  background-image: url("./img/screen.svg");
+
   grid-area: screen;
+}
+
+.screen_text {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--color-violet-light);
+  text-transform: uppercase;
 }
 
 .position {
