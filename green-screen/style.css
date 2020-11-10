@@ -428,6 +428,7 @@
   background-color: var(--color-green);
   border: none;
   border-radius: 30px;
+  cursor: pointer;
 
   grid-area: pay;
 }
@@ -464,6 +465,9 @@
   align-items: end;
 
   background-image: url("./img/screen.svg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;
 
   grid-area: screen;
 }
@@ -476,7 +480,15 @@
 }
 
 .position {
+  display: grid;
+
+  gap: 30px;
   grid-area: position;
+  grid-template-areas: "row1 seats1 seats1 seats1 seats1 seats1 seats1 seats1 seats1 seats1 seats1"
+  "row2 seats2 seats2 seats2 seats2 seats2 seats2 seats2 seats2 seats2 seats2"
+  "params params params params params params params params params params params";
+  grid-template-columns: repeat(11, 80px);
+  grid-template-rows: repeat(2, 80px);
 }
 
 .date__prev {
@@ -644,4 +656,121 @@
 .date__time,
 .date__time-btn--current {
   color: var(--color-white);
+}
+
+.position__row1 {
+  grid-area: row1;
+}
+
+.position__row2 {
+  grid-area: row2;
+}
+
+.position__row1,
+.position__row2 {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--color-gray);
+}
+
+.position__seats1 {
+  grid-area: seats1;
+}
+
+.position__seats2 {
+  grid-area: seats2;
+}
+
+.position__seats1,
+.position__seats2 {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  gap: 30px;
+}
+
+.position__seat {
+  width: 80px;
+}
+
+.possition__btn {
+  width: 100%;
+  height: 100%;
+
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--color-violet);
+
+  background-color: transparent;
+  background-image: url("./img/seat-free.svg");
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+}
+
+.possition__btn--occupied {
+  color: var(--color-violet-light);
+
+  background-image: url("./img/seat-occupied.svg");
+}
+
+.possition__btn--selected {
+  color: var(--color-white);
+
+  background-image: url("./img/seat-selected.svg");
+}
+
+.position__params {
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  margin: 0;
+  margin-top: auto;
+  margin-left: 50px;
+  padding: 0;
+
+  list-style: none;
+
+  grid-area: params;
+}
+
+.position__param {
+  position: relative;
+
+  margin-right: 110px;
+  padding-left: 36px;
+
+  font-size: 16px;
+  color: var(--color-gray);
+}
+
+.position__param:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  display: block;
+  width: 24px;
+  height: 24px;
+
+  background-color: var(--color-light);
+  border: 2px solid var(--color-light);
+  border-radius: 4px;
+}
+
+.position__param--occupied:before {
+  background-color: transparent;
+}
+
+.position__param--selected:before {
+  background-color: var(--color-green);
 }
