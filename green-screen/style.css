@@ -229,10 +229,6 @@
   grid-template-rows: auto;
 }
 
-.movie {
-  grid-area: movie;
-}
-
 .order {
   display: grid;
 
@@ -434,4 +430,152 @@
   border-radius: 30px;
 
   grid-area: pay;
+}
+
+.movie {
+  display: grid;
+  margin: 60px;
+
+  grid-area: movie;
+  grid-template-areas: "date"
+  "screen"
+  "position";
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto;
+}
+
+
+.date {
+  display: grid;
+
+  grid-area: date;
+  grid-template-areas: "prev days days days days days days days days days next"
+  "2D times2 times2 times2 times2 times2 times2 times2 times2 times2 times2"
+  "3D times3 times3 times3 times3 times3 times3 times3 times3 times3 times3";
+  grid-template-columns: repeat(11, 1fr);
+  grid-template-rows: auto auto auto;
+}
+
+.screen {
+  grid-area: screen;
+}
+
+.position {
+  grid-area: position;
+}
+
+.date__prev {
+  grid-area: prev;
+}
+
+.date__next {
+  margin-left: auto;
+
+  grid-area: next;
+}
+
+.date__prev,
+.date__next {
+  position: relative;
+
+  width: 80px;
+  height: 120px;
+
+  background-color: var(--color-light);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.date__prev:before,
+.date__next:before {
+  content: "";
+  position: absolute;
+
+  width: 10px;
+  height: 10px;
+
+  border-top: 3px solid var(--color-violet-light);
+  border-left: 3px solid var(--color-violet-light);
+}
+
+.date__prev:before {
+  top: 45%;
+  left: 45%;
+
+  transform: rotate(-45deg);
+}
+
+.date__next:before {
+  top: 45%;
+  right: 45%;
+
+  transform: rotate(135deg);
+}
+
+.date__days {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  gap: 30px;
+  grid-area: days;
+}
+
+.date__day,
+.date__day-btn {
+  width: 100%;
+  height: 100%;
+}
+
+.date__day-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background-color: var(--color-light);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+
+  gap: 12px;
+}
+
+.date__day-btn--current {
+  background-color: var(--color-green);
+  box-shadow: 0 8px 20px rgba(67, 208, 0, 0.6);
+}
+
+.date__day-btn--current .date__date,
+.date__day-btn--current .date__week-day {
+  color: var(--color-white);
+}
+
+.date__date {
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--color-violet);
+}
+
+.date__week-day {
+  font-size: 16px;
+  color: var(--color-violet);
+}
+
+.date__row1 {
+  grid-area: 2D;
+}
+
+.date__row2 {
+  grid-area: 3D;
+}
+
+.date__times1 {
+  grid-area: times2;
+}
+
+.date__times2 {
+  grid-area: times3;
 }
