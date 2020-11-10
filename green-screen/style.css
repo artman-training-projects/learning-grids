@@ -9,8 +9,6 @@
   --color-white: #ffffff;
 }
 
-/* font-family: 'Courier Prime', monospace; */
-
 .visually-hidden {
   position: absolute;
 
@@ -32,9 +30,8 @@
 
 .page-body {
   display: grid;
-  width: 1920px;
-  height: 980px;
   margin: 0 auto;
+  overflow: hidden;
 
   grid-template-areas: "head head"
   "nav main";
